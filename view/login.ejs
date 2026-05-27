@@ -16,7 +16,6 @@
             --red: #ff4c4c;
             --border: 2.5px solid #0e0e0e;
             --shadow: 5px 5px 0px #0e0e0e;
-            --shadow-lg: 8px 8px 0px #0e0e0e;
             --shadow-xl: 12px 12px 0px #0e0e0e;
             --radius: 16px;
         }
@@ -36,7 +35,7 @@
             perspective: 1200px;
         }
 
-        /* ── Grid background ── */
+        /* Grid background */
         body::before {
             content: '';
             position: fixed; inset: 0;
@@ -47,7 +46,7 @@
             pointer-events: none; z-index: 0;
         }
 
-        /* ── Floating 3D Shapes ── */
+        /* Floating Shapes */
         .shape { position: fixed; pointer-events: none; z-index: 1; transform-style: preserve-3d; }
 
         .shape-cube { width: 80px; height: 80px; top: 10%; left: 7%; animation: floatCube 7s ease-in-out infinite; }
@@ -113,9 +112,8 @@
             50%     { transform: translateY(-20px) rotate(15deg); }
         }
 
-        /* ── Custom Cursor ── */
+        /* Custom Cursor */
         * { cursor: none !important; }
-
         #cursor-outer {
             position: fixed; width: 36px; height: 36px;
             border: 2.5px solid var(--black); border-radius: 50%;
@@ -174,7 +172,7 @@
             transform: translate(18px, -28px); transition: opacity .2s;
         }
 
-        /* ── NAVBAR ── */
+        /* NAVBAR */
         .navbar {
             position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
             z-index: 100; background: var(--cream); border: var(--border);
@@ -201,7 +199,7 @@
         }
         .nav-dot { font-family: 'Space Mono', monospace; font-size: 11px; color: #888; }
 
-        /* ── MAIN CARD ── */
+        /* MAIN CARD */
         .scene { position: relative; z-index: 10; perspective: 1000px; margin-top: 60px; }
 
         .card-3d-wrapper {
@@ -240,7 +238,7 @@
             50%     { transform: translateY(-5px) rotate(-2deg); }
         }
 
-        /* ── Card Header ── */
+        /* Card Header */
         .card-header {
             padding: 36px 40px 28px;
             border-bottom: var(--border);
@@ -267,7 +265,6 @@
         }
         .logo-text { font-family: 'DM Serif Display', serif; font-size: 22px; color: #fff; line-height: 1; }
         .logo-sub  { font-family: 'Space Mono', monospace; font-size: 9px; color: rgba(255,255,255,.4); letter-spacing: 2px; text-transform: uppercase; margin-top: 3px; }
-
         .header-title { font-family: 'DM Serif Display', serif; font-size: 32px; color: #fff; line-height: 1.1; position: relative; z-index: 1; }
         .header-title em { font-style: italic; color: var(--yellow); }
         .header-sub { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(255,255,255,.45); margin-top: 8px; line-height: 1.6; position: relative; z-index: 1; }
@@ -279,7 +276,7 @@
         }
         @keyframes barSlide { 0% { background-position: 0% 0%; } 100% { background-position: 200% 0%; } }
 
-        /* ── Card Body ── */
+        /* Card Body */
         .card-body { padding: 32px 40px 36px; }
 
         .error-banner {
@@ -291,7 +288,7 @@
         }
         .error-banner::before { content: '✕'; font-weight: 700; }
 
-        /* ── Google Button ── */
+        /* Google Button */
         .google-btn {
             width: 100%; padding: 13px 20px;
             background: #fff; border: var(--border); border-radius: 12px;
@@ -316,12 +313,12 @@
         .google-wrap:active .google-btn-shadow { transform: translate(2px,2px); }
         .google-icon { width: 20px; height: 20px; flex-shrink: 0; }
 
-        /* ── Divider ── */
+        /* Divider */
         .divider { display: flex; align-items: center; gap: 12px; margin: 20px 0; }
         .divider::before, .divider::after { content: ''; flex: 1; height: 1.5px; background: var(--black); opacity: .15; }
         .divider span { font-family: 'Space Mono', monospace; font-size: 11px; color: #999; }
 
-        /* ── Fields ── */
+        /* Fields */
         .fields { display: flex; flex-direction: column; gap: 16px; }
         .field-group { display: flex; flex-direction: column; gap: 6px; }
         .field-label {
@@ -357,10 +354,9 @@
         }
         .pw-toggle:hover { color: var(--black); }
 
-        /* ── Primary Button ── */
+        /* Primary Button */
         .btn-wrap { position: relative; transform-style: preserve-3d; margin-top: 4px; }
         .btn-shadow { position: absolute; inset: 0; background: var(--black); border-radius: 12px; transform: translate(5px,5px); transition: transform .15s; }
-
         .btn {
             width: 100%; padding: 15px; border: var(--border); border-radius: 12px;
             background: var(--teal); color: var(--black);
@@ -383,7 +379,7 @@
         .btn:hover .btn-arrow { transform: translateX(5px); }
         .btn.loading { background: var(--cream-dark); cursor: wait; }
 
-        /* ── Contributor Button ── */
+        /* Contributor Button */
         .contrib-wrap { position: relative; margin-top: 12px; }
         .contrib-shadow { position: absolute; inset: 0; background: var(--black); border-radius: 12px; transform: translate(4px,4px); transition: transform .15s; }
         .btn-contrib {
@@ -402,7 +398,7 @@
         .spinner { width: 18px; height: 18px; border: 3px solid rgba(0,0,0,.15); border-top-color: var(--black); border-radius: 50%; animation: spin .7s linear infinite; display: none; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* ── Footer ── */
+        /* Footer */
         .switch-link {
             text-align: center; margin-top: 24px; padding-top: 24px;
             border-top: 1.5px dashed rgba(14,14,14,.15);
@@ -414,11 +410,11 @@
         }
         .switch-link a:hover { background: rgba(0,201,167,.12); }
 
-        /* ── Ticker ── */
+        /* Ticker */
         .ticker {
             position: absolute; bottom: -18px; right: 24px;
             background: var(--black); color: #fff;
-            border: var(--border); border-color: rgba(255,255,255,.1);
+            border: 2px solid rgba(255,255,255,.1);
             border-radius: 10px; padding: 8px 14px;
             display: flex; align-items: center; gap: 10px;
             font-family: 'Space Mono', monospace; font-size: 11px;
@@ -433,7 +429,6 @@
         @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: .6; } }
         .ticker-count { color: var(--yellow); font-weight: 700; }
 
-        /* ── Shake ── */
         @keyframes shake {
             0%,100% { transform: translateX(0); }
             20% { transform: translateX(-6px); } 40% { transform: translateX(6px); }
@@ -449,60 +444,252 @@
     </style>
 </head>
 <body>
-    <main class="auth-shell">
-        <section class="auth-card">
-            <a class="brand" href="/">
-                <span class="brand-mark">C</span>
-                <span>CreatorOS</span>
-            </a>
 
-            <h1>Welcome back</h1>
-            <p class="subtitle">Log in to continue managing your creator tools and shortened links.</p>
+    <div id="cursor-outer"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-label"></div>
+    <div id="spotlight"></div>
 
-            <% if (typeof error !== 'undefined' && error) { %>
-                <p class="auth-error" role="alert"><%= error %></p>
-            <% } %>
+    <!-- Floating shapes -->
+    <div class="shape shape-cube">
+        <div class="face face-front">C</div>
+        <div class="face face-back">OS</div>
+        <div class="face face-left"></div>
+        <div class="face face-right"></div>
+        <div class="face face-top"></div>
+        <div class="face face-bottom"></div>
+    </div>
+    <div class="shape shape-ring"></div>
+    <div class="shape shape-pill"></div>
+    <div class="shape shape-star">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 5 L61 35 L95 35 L68 57 L79 91 L50 70 L21 91 L32 57 L5 35 L39 35 Z" fill="#4da6ff" stroke="#0e0e0e" stroke-width="4"/>
+        </svg>
+    </div>
+    <div class="shape shape-triangle"></div>
 
-            <a
-                class="google-login"
-                href="/auth/google"
-                data-loading-text="Connecting..."
-            >
-                <svg class="google-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-                    <path fill="#EA4335" d="M24 9.5c3.5 0 6.5 1.2 8.9 3.5l6.6-6.6C35.5 2.7 30.3.5 24 .5 14.8.5 6.9 5.8 3.1 13.5l7.7 6C12.6 13.6 17.8 9.5 24 9.5z"/>
-                    <path fill="#4285F4" d="M46.6 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.7c-.6 2.9-2.2 5.4-4.8 7.1l7.4 5.7c4.3-4 7.3-9.9 7.3-16.8z"/>
-                    <path fill="#FBBC05" d="M10.8 28.5c-.5-1.4-.8-2.9-.8-4.5s.3-3.1.8-4.5l-7.7-6C1.5 16.7.6 20.2.6 24s.9 7.3 2.5 10.5l7.7-6z"/>
-                    <path fill="#34A853" d="M24 47.5c6.3 0 11.6-2.1 15.4-5.7L32 36.1c-2.1 1.4-4.7 2.2-8 2.2-6.2 0-11.4-4.1-13.2-9.8l-7.7 6C6.9 42.2 14.8 47.5 24 47.5z"/>
-                </svg>
-                <span>Continue with Google</span>
-            </a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="nav-brand">
+            <div class="nav-icon">C</div>
+            <div>
+                <div>CreatorOS</div>
+                <div class="nav-dot">UNIFIED DASHBOARD</div>
+            </div>
+        </a>
+        <span class="nav-dot">—</span>
+        <span style="font-family:'Space Mono',monospace;font-size:11px;color:#888;">New here?</span>
+        <a href="/signup" style="background:var(--black);border:2px solid var(--black);border-radius:999px;padding:6px 16px;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:#fff;text-decoration:none;box-shadow:2px 2px 0 var(--teal);transition:transform .15s;" onmouseover="this.style.transform='translate(-1px,-1px)'" onmouseout="this.style.transform=''">Sign Up →</a>
+    </nav>
 
-            <div class="divider">or</div>
+    <!-- Main card -->
+    <div class="scene">
+        <div class="card-3d-wrapper" id="cardWrapper">
+            <div class="card">
+                <div class="badge">✦ WELCOME BACK</div>
 
-            <form action="/login" method="POST" id="email-login-form">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit" data-loading-text="Logging in...">Login</button>
-            </form>
+                <div class="card-header">
+                    <div class="logo-row">
+                        <div class="logo-icon">C</div>
+                        <div>
+                            <div class="logo-text">CreatorOS</div>
+                            <div class="logo-sub">Unified Dashboard</div>
+                        </div>
+                    </div>
+                    <div class="header-title">Welcome<br><em>back.</em></div>
+                    <div class="header-sub">Access your creator ecosystem. Hundreds of links waiting.</div>
+                    <div class="header-bar"></div>
+                </div>
 
-            <form action="/login/contributor" method="POST" class="contributor-form" id="contributor-login-form">
-                <button type="submit" class="contributor-btn" data-loading-text="Continuing...">Continue as Contributor</button>
-            </form>
+                <div class="card-body">
 
-            <p class="switch-link">
-                Don't have an account?
-                <a href="/signup">Signup</a>
-            </p>
-        </section>
-    </main>
+                    <!-- Error banner — uncomment and populate server-side -->
+                    <!-- <div class="error-banner">Invalid email or password.</div> -->
+
+                    <!-- Google Button -->
+                    <div class="google-wrap">
+                        <a class="google-btn" href="/auth/google" id="google-btn">
+                            <svg class="google-icon" viewBox="0 0 48 48" aria-hidden="true">
+                                <path fill="#EA4335" d="M24 9.5c3.5 0 6.5 1.2 8.9 3.5l6.6-6.6C35.5 2.7 30.3.5 24 .5 14.8.5 6.9 5.8 3.1 13.5l7.7 6C12.6 13.6 17.8 9.5 24 9.5z"/>
+                                <path fill="#4285F4" d="M46.6 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.7c-.6 2.9-2.2 5.4-4.8 7.1l7.4 5.7c4.3-4 7.3-9.9 7.3-16.8z"/>
+                                <path fill="#FBBC05" d="M10.8 28.5c-.5-1.4-.8-2.9-.8-4.5s.3-3.1.8-4.5l-7.7-6C1.5 16.7.6 20.2.6 24s.9 7.3 2.5 10.5l7.7-6z"/>
+                                <path fill="#34A853" d="M24 47.5c6.3 0 11.6-2.1 15.4-5.7L32 36.1c-2.1 1.4-4.7 2.2-8 2.2-6.2 0-11.4-4.1-13.2-9.8l-7.7 6C6.9 42.2 14.8 47.5 24 47.5z"/>
+                            </svg>
+                            <span id="google-label">Continue with Google</span>
+                        </a>
+                        <div class="google-btn-shadow"></div>
+                    </div>
+
+                    <div class="divider"><span>or sign in with email</span></div>
+
+                    <!-- Login form -->
+                    <form action="/login" method="POST" id="login-form">
+                        <div class="fields">
+                            <div class="field-group" id="fg1">
+                                <label class="field-label" for="f1">Email Address</label>
+                                <div class="field-wrap">
+                                    <span class="field-icon">✉️</span>
+                                    <input type="email" name="email" id="f1" placeholder="you@example.com" required autocomplete="email" />
+                                    <div class="field-shadow"></div>
+                                </div>
+                            </div>
+                            <div class="field-group" id="fg2">
+                                <label class="field-label" for="f2">Password</label>
+                                <div class="field-wrap">
+                                    <span class="field-icon">🔑</span>
+                                    <input type="password" name="password" id="f2" placeholder="Your password" required autocomplete="current-password" />
+                                    <button type="button" class="pw-toggle" id="pwToggle" aria-label="Toggle password">👁</button>
+                                    <div class="field-shadow"></div>
+                                </div>
+                            </div>
+                            <div class="btn-wrap" id="fg3">
+                                <button type="submit" class="btn" id="login-btn">
+                                    <span class="spinner" id="spinner"></span>
+                                    <span id="btnText">Login to Dashboard</span>
+                                    <span class="btn-arrow" id="btnArrow">→</span>
+                                </button>
+                                <div class="btn-shadow"></div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Contributor form -->
+                    <form action="/login/contributor" method="POST" id="contributor-form">
+                        <div class="contrib-wrap" id="fg4">
+                            <button type="submit" class="btn-contrib" id="contrib-btn">
+                                <span class="spinner" id="contrib-spinner"></span>
+                                <span id="contribText">⚡ Login as Contributor</span>
+                            </button>
+                            <div class="contrib-shadow"></div>
+                        </div>
+                    </form>
+
+                    <p class="switch-link">Don't have an account? <a href="/signup">Create one here</a></p>
+                </div>
+
+                <!-- Ticker -->
+                <div class="ticker">
+                    <div class="ticker-dot"></div>
+                    <span><span class="ticker-count" id="liveCount">847</span> creators online</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        const googleLogin = document.querySelector('.google-login');
-        const emailForm = document.querySelector('#email-login-form');
-        const contributorForm = document.querySelector('#contributor-login-form');
+    (function () {
 
-        // ═══════════════════════════════════════════════
+        // 1. CUSTOM CURSOR
+        const cursorOuter = document.getElementById('cursor-outer');
+        const cursorDot   = document.getElementById('cursor-dot');
+        const cursorLabel = document.getElementById('cursor-label');
+        const spotlight   = document.getElementById('spotlight');
+        let mouseX = -200, mouseY = -200, outerX = -200, outerY = -200;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            cursorDot.style.left   = mouseX + 'px';
+            cursorDot.style.top    = mouseY + 'px';
+            cursorLabel.style.left = mouseX + 'px';
+            cursorLabel.style.top  = mouseY + 'px';
+            spotlight.style.left   = mouseX + 'px';
+            spotlight.style.top    = mouseY + 'px';
+            spawnTrail(mouseX, mouseY);
+        });
+
+        (function lerpCursor() {
+            outerX += (mouseX - outerX) * 0.12;
+            outerY += (mouseY - outerY) * 0.12;
+            cursorOuter.style.left = outerX + 'px';
+            cursorOuter.style.top  = outerY + 'px';
+            requestAnimationFrame(lerpCursor);
+        })();
+
+        document.querySelectorAll('a:not(.google-btn), .badge, .nav-brand').forEach(el => {
+            el.addEventListener('mouseenter', () => { document.body.classList.add('cursor-link'); cursorLabel.textContent = 'CLICK'; cursorLabel.style.opacity = '1'; });
+            el.addEventListener('mouseleave', () => { document.body.classList.remove('cursor-link'); cursorLabel.style.opacity = '0'; });
+        });
+
+        const googleBtn = document.getElementById('google-btn');
+        googleBtn.addEventListener('mouseenter', () => { document.body.classList.add('cursor-google'); cursorLabel.textContent = 'GOOGLE'; cursorLabel.style.opacity = '1'; });
+        googleBtn.addEventListener('mouseleave', () => { document.body.classList.remove('cursor-google'); cursorLabel.style.opacity = '0'; });
+
+        document.querySelectorAll('input').forEach(el => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('cursor-input'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-input'));
+        });
+
+        const loginBtn = document.getElementById('login-btn');
+        loginBtn.addEventListener('mouseenter', () => { document.body.classList.add('cursor-btn'); cursorLabel.textContent = 'LOGIN →'; cursorLabel.style.opacity = '1'; });
+        loginBtn.addEventListener('mouseleave', () => { document.body.classList.remove('cursor-btn'); cursorLabel.style.opacity = '0'; });
+
+        document.addEventListener('click', (e) => {
+            const ripple = document.createElement('div');
+            ripple.className = 'click-ripple';
+            ripple.style.left = e.clientX + 'px';
+            ripple.style.top  = e.clientY + 'px';
+            document.body.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+            cursorDot.style.transform = 'translate(-50%,-50%) scale(2.5)';
+            cursorDot.style.opacity = '0.4';
+            setTimeout(() => { cursorDot.style.transform = 'translate(-50%,-50%) scale(1)'; cursorDot.style.opacity = '1'; }, 200);
+        });
+
+        const trailColors = ['#00c9a7', '#f5c842', '#4da6ff', '#ff4c4c'];
+        let trailCount = 0;
+        function spawnTrail(x, y) {
+            if (trailCount++ % 3 !== 0) return;
+            const dot = document.createElement('div');
+            dot.className = 'trail-dot';
+            const size = Math.random() * 5 + 3;
+            dot.style.cssText = `left:${x}px;top:${y}px;width:${size}px;height:${size}px;background:${trailColors[Math.floor(Math.random()*4)]};`;
+            document.body.appendChild(dot);
+            setTimeout(() => dot.remove(), 600);
+        }
+
+        // 2. MAGNETIC BUTTONS
+        loginBtn.addEventListener('mousemove', function(e) {
+            const r = this.getBoundingClientRect();
+            const dx = e.clientX - (r.left + r.width / 2);
+            const dy = e.clientY - (r.top + r.height / 2);
+            this.style.transform = `translate(${dx * 0.3}px, ${dy * 0.3}px)`;
+        });
+        loginBtn.addEventListener('mouseleave', function() { this.style.transform = ''; });
+
+        const contribBtn = document.getElementById('contrib-btn');
+        contribBtn.addEventListener('mousemove', function(e) {
+            const r = this.getBoundingClientRect();
+            const dx = e.clientX - (r.left + r.width / 2);
+            const dy = e.clientY - (r.top + r.height / 2);
+            this.style.transform = `translate(${dx * 0.25}px, ${dy * 0.25}px)`;
+        });
+        contribBtn.addEventListener('mouseleave', function() { this.style.transform = ''; });
+
+        document.querySelectorAll('.field-label').forEach(lbl => {
+            const wrap = lbl.closest('.field-group');
+            wrap.addEventListener('mouseenter', () => { lbl.style.transform = 'translateX(4px)'; lbl.style.color = 'var(--teal)'; });
+            wrap.addEventListener('mouseleave', () => { lbl.style.transform = ''; lbl.style.color = ''; });
+        });
+
+        // 3. 3D CARD TILT
+        const wrapper = document.getElementById('cardWrapper');
+        document.addEventListener('mousemove', (e) => {
+            const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+            const rx = ((e.clientY - cy) / cy) * -6;
+            const ry = ((e.clientX - cx) / cx) * 6;
+            wrapper.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+        });
+        document.addEventListener('mouseleave', () => { wrapper.style.transform = ''; });
+
+        // 4. PASSWORD TOGGLE
+        const pwInput = document.getElementById('f2');
+        document.getElementById('pwToggle').addEventListener('click', function () {
+            const isText = pwInput.type === 'text';
+            pwInput.type = isText ? 'password' : 'text';
+            this.textContent = isText ? '👁' : '🙈';
+        });
+
         // 5. FORM SUBMITS
-        // ═══════════════════════════════════════════════
         document.getElementById('login-form').addEventListener('submit', function () {
             if (loginBtn.classList.contains('loading')) return;
             loginBtn.classList.add('loading');
@@ -511,11 +698,30 @@
             document.getElementById('btnArrow').style.display = 'none';
         });
 
-        document.getElementById('contributor-form').addEventListener('submit', function () {
+        document.getElementById('contributor-form').addEventListener('submit', function (e) {
+            e.preventDefault();
             if (contribBtn.classList.contains('loading')) return;
             contribBtn.classList.add('loading');
             document.getElementById('contrib-spinner').style.display = 'block';
             document.getElementById('contribText').textContent = 'Connecting...';
+
+            fetch('/api/auth/contributor-login', {
+                method: 'POST',
+                headers: { Accept: 'application/json' },
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (!data.success) throw new Error(data.message || 'Login failed');
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('user', JSON.stringify(data.user));
+                window.location.href = '/dashboard';
+            })
+            .catch(err => {
+                console.error(err);
+                contribBtn.classList.remove('loading');
+                document.getElementById('contrib-spinner').style.display = 'none';
+                document.getElementById('contribText').textContent = '⚡ Login as Contributor';
+            });
         });
 
         googleBtn.addEventListener('click', function () {
@@ -523,9 +729,7 @@
             this.style.opacity = '0.75';
         });
 
-        // ═══════════════════════════════════════════════
         // 6. SHAKE ON INVALID
-        // ═══════════════════════════════════════════════
         document.querySelectorAll('input').forEach(inp => {
             inp.addEventListener('invalid', e => {
                 e.preventDefault();
@@ -538,41 +742,20 @@
             });
         });
 
-        contributorForm?.addEventListener('submit', async function (event) {
-            event.preventDefault();
+        // 7. LIVE TICKER + STAGGER ENTRANCE
+        const countEl = document.getElementById('liveCount');
+        let base = 847;
+        setInterval(() => { base += Math.floor(Math.random() * 3) - 1; countEl.textContent = base; }, 2800);
 
-            const submitButton = this.querySelector('button[type="submit"]');
-
-            if (submitButton) {
-                submitButton.disabled = true;
-                submitButton.textContent = submitButton.dataset.loadingText;
-            }
-
-            try {
-                const response = await fetch('/api/auth/contributor-login', {
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                    },
-                });
-                const data = await response.json();
-
-                if (!response.ok || !data.success) {
-                    throw new Error(data.message || 'Contributor login failed');
-                }
-
-                localStorage.setItem('token', data.token);
-                localStorage.setItem('user', JSON.stringify(data.user));
-                window.location.href = '/dashboard';
-            } catch (error) {
-                console.error(error);
-
-                if (submitButton) {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Continue as Contributor';
-                }
-            }
+        ['fg1','fg2','fg3','fg4'].forEach((id, i) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.style.opacity = '0'; el.style.transform = 'translateY(16px)';
+            el.style.transition = `opacity .5s ${.6 + i * .1}s, transform .5s ${.6 + i * .1}s`;
+            setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, 50);
         });
+
+    })();
     </script>
 </body>
 </html>
